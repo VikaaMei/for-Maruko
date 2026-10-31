@@ -31,6 +31,21 @@
     border-radius: 20px;
     border: 3px solid #F8C9DC;
     box-shadow: 0 8px 20px #B9DDFB;
+.card {
+    transform-style: preserve-3d;
+    box-shadow:
+        0 15px 25px rgba(102, 140, 184, 0.18),
+        0 5px 10px rgba(233, 156, 189, 0.15);
+    animation: cardFloat 5s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
 }
 
         .main-photo {
@@ -51,50 +66,8 @@
             color: #E99CBD;
             text-shadow: 2px 3px 5px #E99CBD;
         }
-        /* FLOATING DECORATIONS */
-.floating {
-    position: fixed;
-    pointer-events: none;
-    z-index: 10;
-    animation: float 4s ease-in-out infinite;
-}
+        
 
-.float-1 {
-    top: 12%;
-    left: 7%;
-    font-size: 30px;
-    animation-delay: 0s;
-}
-
-.float-2 {
-    top: 25%;
-    right: 8%;
-    font-size: 25px;
-    animation-delay: 1s;
-}
-
-.float-3 {
-    bottom: 20%;
-    left: 8%;
-    font-size: 28px;
-    animation-delay: 2s;
-}
-
-.float-4 {
-    bottom: 12%;
-    right: 9%;
-    font-size: 32px;
-    animation-delay: 0.5s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-18px) rotate(12deg);
-    }
-}
         button {
     background-color: #E99CBD;
     color: white;
@@ -155,10 +128,58 @@ button:active {
     margin-top: 25px;
     box-shadow: 0 5px 15px #B9DDFB;
 }
+        /* FLOATING DECORATIONS */
+.floating {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+}
+
+.float-1 {
+    top: 12%;
+    left: 7%;
+    font-size: 30px;
+    animation-delay: 0s;
+}
+
+.float-2 {
+    top: 25%;
+    right: 8%;
+    font-size: 25px;
+    animation-delay: 1s;
+}
+
+.float-3 {
+    bottom: 20%;
+    left: 8%;
+    font-size: 28px;
+    animation-delay: 2s;
+}
+
+.float-4 {
+    bottom: 12%;
+    right: 9%;
+    font-size: 32px;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(12deg);
+    }
+}
     </style>
 </head>
 
 <body>
+    <div class="floating float-1">✦</div>
+<div class="floating float-2">♡</div>
+<div class="floating float-3">✧</div>
+<div class="floating float-4">୨ৎ</div>
     
     <div class="card">
 
