@@ -51,6 +51,50 @@
             color: #E99CBD;
             text-shadow: 2px 3px 5px #E99CBD;
         }
+        /* FLOATING DECORATIONS */
+.floating {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+}
+
+.float-1 {
+    top: 12%;
+    left: 7%;
+    font-size: 30px;
+    animation-delay: 0s;
+}
+
+.float-2 {
+    top: 25%;
+    right: 8%;
+    font-size: 25px;
+    animation-delay: 1s;
+}
+
+.float-3 {
+    bottom: 20%;
+    left: 8%;
+    font-size: 28px;
+    animation-delay: 2s;
+}
+
+.float-4 {
+    bottom: 12%;
+    right: 9%;
+    font-size: 32px;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(12deg);
+    }
+}
         button {
     background-color: #E99CBD;
     color: white;
